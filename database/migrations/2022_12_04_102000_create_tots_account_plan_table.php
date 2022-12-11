@@ -24,6 +24,7 @@ return new class extends Migration
             $table->dateTime('end')->nullable(true);
             $table->json('data')->nullable(true);
             $table->tinyInteger('status')->nullable(false)->default(0)->comment('0 = Pending, 1 = Payout, 2 = Canceled');
+            $table->string('external_id', 200)->nullable(true);
             $table->timestamps();
 
             $table->foreign('account_id')->references('id')->on('tots_account');
