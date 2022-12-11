@@ -3,6 +3,7 @@
 namespace Tots\Billing\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Tots\Account\Models\TotsAccount;
 use Tots\Billing\Models\TotsAccountPlan;
 
 class AccountCurrentPlanController extends \Laravel\Lumen\Routing\Controller
