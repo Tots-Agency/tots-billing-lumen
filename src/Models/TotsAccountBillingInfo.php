@@ -11,11 +11,11 @@ use Tots\Auth\Models\TotsProvider;
  *
  * @author matiascamiletti
  */
-class TotsAccountPlan extends Model
+class TotsAccountBillingInfo extends Model
 {
-    protected $table = 'tots_account_plan';
+    protected $table = 'tots_account_billing_info';
     
-    protected $casts = ['data' => 'array'];
+    //protected $casts = ['data' => 'array'];
     /**
      * Indicates if the model should be timestamped.
      *
@@ -30,21 +30,5 @@ class TotsAccountPlan extends Model
     public function account()
     {
         return $this->belongsTo(TotsAccount::class, 'account_id');
-    }
-    /**
-    * 
-    * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
-    */
-    public function plan()
-    {
-        return $this->belongsTo(TotsPlan::class, 'plan_id');
-    }
-    /**
-    * 
-    * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
-    */
-    public function provider()
-    {
-        return $this->belongsTo(TotsProvider::class, 'provider_id');
     }
 }
