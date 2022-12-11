@@ -12,7 +12,7 @@ class AccountCurrentPlanController extends \Laravel\Lumen\Routing\Controller
         /** @var \Tots\Account\Models\TotsAccount $account */
         $account = $request->input(TotsAccount::class);
 
-        $accPlan = TotsAccountPlan::where('account_id', $account->id)->orderBy('id', 'desc')->first();
+        $accPlan = TotsAccountPlan::with(['plan', 'provider'])->where('account_id', $account->id)->orderBy('id', 'desc')->first();
         if($accPlan == null){
             throw new \Exception('The account not has plan');
         }
