@@ -7,7 +7,7 @@ use Tots\Billing\Models\TotsAccountPlan;
 
 class AccountCurrentPlanController extends \Laravel\Lumen\Routing\Controller
 {
-    public function handle($accountId, Request $request)
+    public function handle($account_id, Request $request)
     {
         /** @var \Tots\Account\Models\TotsAccount $account */
         $account = $request->input(TotsAccount::class);
