@@ -3,6 +3,7 @@
 namespace Tots\Billing\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Tots\Account\Models\TotsAccount;
 use Tots\Billing\Models\TotsAccountBillingInfo;
 use Tots\Billing\Models\TotsAccountPlan;
 
