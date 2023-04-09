@@ -24,7 +24,7 @@ return new class extends Migration
             $table->decimal('discount', 10, 2)->nullable(false)->default(0);
             $table->decimal('tax', 10, 2)->nullable(false)->default(0);
             $table->decimal('total', 10, 2)->nullable(false)->default(0);
-            $table->integer('status', 2)->nullable(false)->default(0)->comment('1 = Payout');
+            $table->tinyInteger('status')->nullable(false)->default(0)->comment('1 = Payout');
             $table->string('currency', 3)->nullable(false)->default('USD');
             $table->string('external_id', 200)->nullable(true);
             $table->timestamps();
